@@ -1,0 +1,34 @@
+; Curtis Cali
+
+; make-diff Exp Exp -> Exp
+(define (make-diff e1 e2) (list '- e1 e2))
+
+; diff? Exp -> Bool
+(define (diff? e) (and (pair? a) (eq? (car e) '-)))
+
+; make-prod Exp Exp -> Exp
+(define (make-prod e1 e2) (list '* e1 e2))
+
+; diff? Exp -> Bool
+(define (diff? e) (and (pair? a) (eq? (car e) '-)))
+
+; make-quo Exp Exp -> Exp
+(define (make-quo e1 e2) (list '/ e1 e2))
+
+; quo? Exp -> Bool
+(define (quo? e) (and (pair? a) (eq? (car e) '/)))
+
+; make-neg Exp -> Exp
+(define (make-neg e) (list 'neg e))
+
+; neg? Exp -> Bool
+(define (neg? e) (and (pair? a) (eq? (car e) 'neg)))
+
+; neg-exp NegExp -> Exp
+(define neg-exp cadr)
+
+; make-equality Exp Exp -> Exp
+(define (make-equality e1 e2) (list '= e1 e2))
+
+; equality? Exp -> Bool
+(define (equality? e) (and (pair? a) (eq? (car e) '=)))
